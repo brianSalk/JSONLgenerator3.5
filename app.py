@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if 'last_role' not in st.session_state:
         st.session_state['last_role'] = 0
     st.title('Create JSONL for GPT3.5 and newer')
-    role = st.radio('role', ['system', 'user', 'assistant'], horizontal=True, index=None)
+    role = st.radio('role', ['system', 'user', 'assistant'], horizontal=True, index=0)
     with st.form('main_form', clear_on_submit=True):
         next_line = st.text_input('content', placeholder='Enter content here', key='content')
         submitted = st.form_submit_button('Append line to messages', disabled=not role)
