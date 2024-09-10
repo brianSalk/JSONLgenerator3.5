@@ -9,7 +9,7 @@ def __create_role_line(role, content, is_last_line):
 def create_json_from_lines(lines):
     jsonl = "{\n"
     for m, messages in enumerate(lines):
-        jsonl += "\tmessages: [\n"
+        jsonl += '\t"messages": [\n'
         for r, (role, content) in enumerate(messages):
             is_last_line = r == len(messages) - 1
             jsonl += __create_role_line(role, content, is_last_line)
