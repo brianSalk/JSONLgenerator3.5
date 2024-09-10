@@ -1,6 +1,5 @@
 import streamlit as st
 import create_jsonl as cj
-import fonts
 
 if __name__ == "__main__":
     if 'messages' not in st.session_state:    
