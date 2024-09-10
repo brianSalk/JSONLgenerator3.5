@@ -7,9 +7,8 @@ if __name__ == "__main__":
         st.session_state['messages'] = messages
     if 'next_message' not in st.session_state:
         st.session_state['next_message'] = []
-    if 'last_role' not in st.session_state:
-        st.session_state['last_role'] = 0
     st.title('Create JSONL for GPT3.5 and newer')
+    # role radio must be above form because it resets value each time if its in the form
     role = st.radio('role', ['system', 'user', 'assistant'], horizontal=True, index=0)
     with st.form('main_form', clear_on_submit=True):
         next_line = st.text_input('content', placeholder='Enter content here', key='content')
