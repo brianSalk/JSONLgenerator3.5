@@ -2,6 +2,16 @@ import streamlit as st
 import create_jsonl as cj
 
 if __name__ == "__main__":
+    with st.sidebar():
+        st.header('How To Use')
+        st.write('**1)** Select the roll you want and write your content for that roll')
+        st.write('**2)** Enter your content for that roll')
+        st.write("**3) When you are done, click 'append line to messages'")
+        st.write('**4)** repeate steps 1-3 as many times as necessary')
+        st.write("**5)** finally, click 'append messages to JSON file' and repeate all steps until your file is complete")
+        st.write()
+        st.write('Check out my github [here](https://github.com/brianSalk/JSONLgenerator3.5)')
+        
     if "messages" not in st.session_state:
         messages = []
         st.session_state["messages"] = messages
