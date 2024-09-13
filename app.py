@@ -2,7 +2,7 @@ import streamlit as st
 import create_jsonl as cj
 
 if __name__ == "__main__":
-    with st.sidebar():
+    with st.sidebar:
         st.header('How To Use')
         st.write('**1)** Select the roll you want and write your content for that roll')
         st.write('**2)** Enter your content for that roll')
